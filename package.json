@@ -1,0 +1,10 @@
+{
+  "name": "gemini-notes-sync",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Google Apps Script that saves Gemini meeting notes to a Drive folder.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test"
+  }
+}
