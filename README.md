@@ -6,8 +6,6 @@ Every hour it searches Gmail for Gemini's "Meeting notes for" emails, copies eac
 
 ## Setup
 
-No build step and no `clasp`. It's one file.
-
 1. Go to [script.google.com](https://script.google.com) and create a new project.
 2. Paste the contents of [`src/Code.gs`](src/Code.gs) over the default `Code.gs`.
 3. Pick `setup` in the function dropdown and hit Run. Approve the Gmail and Drive permissions.
@@ -38,7 +36,6 @@ Each copy gets a `gemini-notes-source:<fileId>` marker in its Drive description.
 
 ## Caveats
 
-- **Existing copies have no marker.** If you used an earlier version, delete the old copies first or back-fill their descriptions. Otherwise the first run copies them again.
 - **Permanent errors are matched by message text.** Google doesn't promise those strings stay the same. If a gone file keeps retrying, add its message to `PERMANENT_ERROR_PATTERNS`.
 - **The dedupe scan reads the whole folder every run.** That's fine for hundreds of files. It'll get slow around tens of thousands.
 
